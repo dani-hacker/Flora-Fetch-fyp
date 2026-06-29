@@ -1,16 +1,12 @@
-providers = ["php", "node"]
-
-[phases.setup]
-aptPkgs = ["git", "unzip"]
+providers = ["php"]
 
 [phases.install]
 cmds = ["composer install --no-dev --optimize-autoloader --no-interaction"]
 
 [phases.build]
 cmds = [
-    "php artisan config:clear",
     "php artisan storage:link || true"
 ]
 
 [start]
-cmd = "php artisan migrate --force --no-interaction && php artisan db:seed --force --no-interaction && php artisan serve --host=0.0.0.0 --port=$PORT"
+cmd = "php artisan migrate --force && php artisan db:seed --force && php artisan serve --host=0.0.0.0 --port=$PORT"
