@@ -34,10 +34,13 @@ These must be enabled in your `php.ini` file:
 
 ### Windows (CMD or PowerShell as Administrator):
 
-**Step 1 — Clone the project:**
+> ⚠️ **Important:** XAMPP must be installed first and MySQL must be running!
+
+**Step 1 — XAMPP ka htdocs folder mein clone karo:**
 ```cmd
-git clone https://github.com/dani-hacker/Flora-Fetch-fyp.git
-cd Flora-Fetch-fyp
+cd C:\xampp\htdocs
+git clone https://github.com/dani-hacker/Flora-Fetch-fyp.git florafetch
+cd florafetch
 ```
 
 **Step 2 — Run setup (single command):**
@@ -60,8 +63,9 @@ setup.bat
 ### Mac / Linux:
 
 ```bash
-git clone https://github.com/dani-hacker/Flora-Fetch-fyp.git
-cd Flora-Fetch-fyp
+cd /Applications/XAMPP/htdocs
+git clone https://github.com/dani-hacker/Flora-Fetch-fyp.git florafetch
+cd florafetch
 chmod +x setup.sh
 ./setup.sh
 ```
@@ -69,6 +73,11 @@ chmod +x setup.sh
 ---
 
 ## ⚙️ Before Running Setup
+
+### 0. XAMPP Install karo (agar nahi hai):
+👉 Download: https://www.apachefriends.org
+- Install karo default path: `C:\xampp\`
+- XAMPP Control Panel open karo
 
 ### 1. Make sure XAMPP is running:
 - ✅ Apache — **Started**

@@ -8,6 +8,25 @@ echo   🌿  FloraFetch — Automatic Setup
 echo  =========================================
 echo.
 
+:: ── CHECK: Must be inside XAMPP htdocs ────────────────────────────────────────
+echo [0/8] Checking project location...
+set "CURRENT=%CD%"
+echo "%CURRENT%" | findstr /i "htdocs" >nul
+if %errorlevel% neq 0 (
+    echo.
+    echo  ⚠️  WARNING: Project is not inside XAMPP htdocs folder!
+    echo.
+    echo  Please clone the project correctly:
+    echo    cd C:\xampp\htdocs
+    echo    git clone https://github.com/dani-hacker/Flora-Fetch-fyp.git florafetch
+    echo    cd florafetch
+    echo    setup.bat
+    echo.
+    pause
+    exit /b 1
+)
+echo  ✅ Location OK: %CURRENT%
+
 :: ── STEP 1: Check PHP ────────────────────────────────────────────────────────
 echo [1/8] Checking PHP...
 php --version >nul 2>&1
