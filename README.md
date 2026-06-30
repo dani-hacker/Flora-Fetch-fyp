@@ -102,4 +102,24 @@ florafetch/
 
 ---
 
+## 📋 Key Files Description
+
+| # | File / Directory | Description |
+|---|-----------------|-------------|
+| 1 | `database/migrations/` | 4 tables — `users`, `plants`, `orders`, `order_items` |
+| 2 | `app/Models/` | `User`, `Plant`, `Order`, `OrderItem` with relationships |
+| 3 | `AuthController.php` | Register, Login, Logout with bcrypt password hashing |
+| 4 | `PlantController.php` | Plant catalog with filters (category, sunlight, watering) |
+| 5 | `CartController.php` | Session-based cart (add, update, remove, clear) |
+| 6 | `OrderController.php` | COD order placement with DB transaction & stock deduction |
+| 7 | `AdminDashboardController.php` | Admin stats — today's orders, pending, low stock, users |
+| 8 | `AdminPlantController.php` | Full Plant CRUD (create, edit, update, delete + image upload) |
+| 9 | `AdminOrderController.php` | Order status update (Pending → Processing → Delivered) |
+| 10 | `AdminMiddleware.php` | Admin route protection — blocks non-admin users (403) |
+| 11 | `resources/views/` | All Blade views — Catalog, Detail, Cart, Checkout, Admin |
+| 12 | `DatabaseSeeder.php` | Seeds admin account + 10 sample plants with prices |
+| 13 | `routes/web.php` | All public, customer & admin routes with middleware |
+
+---
+
 *FloraFetch FYP Project — 2024*
