@@ -14,5 +14,12 @@ npm-debug.log
 yarn-error.log
 /.idea
 /.vscode
+# Office temp files
 *.docx
 *.~lock*
+# OS files
+.DS_Store
+Thumbs.db
+# Bootstrap cache
+/bootstrap/cache/*.php
+!/bootstrap/cache/.gitignore
