@@ -102,12 +102,4 @@ florafetch/
 
 ---
 
-## 🌐 Deployment
-
-This project is configured for **Railway.app** deployment with:
-- `railway.json` — Build configuration
-- `nixpacks.toml` — PHP environment setup
-
----
-
 *FloraFetch FYP Project — 2024*
